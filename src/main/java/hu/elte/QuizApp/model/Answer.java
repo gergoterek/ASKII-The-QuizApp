@@ -23,7 +23,7 @@ public class Answer {
     @Column(nullable = false)
     private boolean correct;
 
-
+    @JsonIgnore
     @ManyToOne
     private Question question;
 }

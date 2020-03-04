@@ -19,11 +19,13 @@ public class Question {
     private Integer question_ID;
 
     @Column(nullable = false)
-    private String question_title;
+    private String title;
+
 
     @OneToMany(mappedBy = "question")
     private List<Answer> answers;
 
+    /*@JsonIgnore
     @ManyToOne
-    private Label labels;
+    private Label labels;*/
 }

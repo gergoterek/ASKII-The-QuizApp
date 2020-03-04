@@ -8,25 +8,25 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.util.List;
 
-@Entity
+/*@Entity
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
+@AllArgsConstructor*/
 public class Label {
-    @Id
+    /*@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer label_ID;
 
     @Column(nullable = false)
     private String label_name;
 
-    @JsonIgnore
+
     @OneToMany(mappedBy = "label")
-    private List<Question> questions;
+    private List<Question> questions;*/
 
-    @JsonIgnore
+   /* @JsonIgnore
     @OneToMany(mappedBy = "label")
-    private List<User_Label> userLabels;
+    private List<User_Label> userLabels;*/
 
-
+    //lehet státusza egy kérdésnek, ha visszadobják javításra
 }

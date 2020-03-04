@@ -8,12 +8,12 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.util.List;
 
-@Entity
+/*@Entity
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
+@AllArgsConstructor*/
 public class User {
-
+/*
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer user_ID;
@@ -39,5 +39,5 @@ public class User {
 
 
     @ManyToOne
-    private Role roles;
+    private Role roles;*/
 }

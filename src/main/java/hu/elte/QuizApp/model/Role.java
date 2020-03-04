@@ -6,13 +6,13 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.List;
-
+/*
 @Entity
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
+@AllArgsConstructor*/
 public class Role {
-    @Id
+    /*@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer role_ID;
 
@@ -20,5 +20,5 @@ public class Role {
     private String role_name;
 
     @OneToMany(mappedBy = "role")
-    private List<User> users;
+    private List<User> users;*/
 }
