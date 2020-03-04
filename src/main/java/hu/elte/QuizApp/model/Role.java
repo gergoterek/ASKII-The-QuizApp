@@ -6,19 +6,19 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.List;
-/*
+
 @Entity
 @Data
 @NoArgsConstructor
-@AllArgsConstructor*/
+@AllArgsConstructor
 public class Role {
-    /*@Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer role_ID;
+    private Integer id;
 
     @Column(nullable = false)
     private String role_name;
 
     @OneToMany(mappedBy = "role")
-    private List<User> users;*/
+    private List<User> users;
 }

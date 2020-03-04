@@ -15,7 +15,7 @@ import javax.persistence.*;
 public class Answer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer answer_ID;
+    private Integer id;
 
     @Column(nullable = false)
     private String answer_title;

@@ -16,7 +16,7 @@ import java.util.List;
 public class Question {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer question_ID;
+    private Integer id;
 
     @Column(nullable = false)
     private String title;
@@ -25,7 +25,7 @@ public class Question {
     @OneToMany(mappedBy = "question")
     private List<Answer> answers;
 
-    /*@JsonIgnore
+    @JsonIgnore
     @ManyToOne
-    private Label labels;*/
+    private Label label;
 }

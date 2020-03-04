@@ -8,17 +8,21 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-/*@Entity
+@Entity
 @Data
 @NoArgsConstructor
-@AllArgsConstructor*/
-public class User_Label {
+@AllArgsConstructor
+public class UserLabel {
 
-   /* @JsonIgnore
-    @ManyToOne
-    private Label labels;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
     @JsonIgnore
     @ManyToOne
-    private User users;*/
+    private Label label;
+
+    @JsonIgnore
+    @ManyToOne
+    private User user;
 }
