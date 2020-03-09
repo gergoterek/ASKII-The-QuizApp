@@ -1,3 +1,15 @@
-<mat-toolbar color = "primary">
-  <span>QuizApp</span>
+<mat-toolbar color='primary'>
+  <mat-toolbar-row>
+      <button mat-icon-button>
+        <mat-icon>menu</mat-icon>
+      </button>
+      <h1>QuizApp</h1>
+      <span class="menu-spacer"></span>
+      <div>
+        <a mat-button [routerLink]="'/create-account'"> Create Account </a>
+        <a mat-button [routerLink] = "'/add-question'"> Add Question</a>
+
+      </div>
+  </mat-toolbar-row>
 </mat-toolbar>
+

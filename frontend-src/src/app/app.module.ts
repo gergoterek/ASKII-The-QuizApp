@@ -7,8 +7,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
-import { QuestionComponent } from './question/question.component';
-import { AddQuestionComponent } from './add-question/add-question.component';
+import { QuestionComponent } from './questions/question/question.component';
+import { AddQuestionComponent } from './questions/add-question/add-question.component';
+import { RouterModule, Routes } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,9 @@ import { AddQuestionComponent } from './add-question/add-question.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    RouterModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
