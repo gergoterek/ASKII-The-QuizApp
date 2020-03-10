@@ -1,4 +1,4 @@
-# QuizApp
+# QuizApp - ASKII
 with Spring Boot + Angular
 
 
