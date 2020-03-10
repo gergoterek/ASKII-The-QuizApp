@@ -29,10 +29,15 @@ public class User {
     @Column(nullable = false)
     private String nickname;
 
+    @Column(name = "total_q", columnDefinition="tinyint(1) default 0")  //default értéke 0 lesz
+    private int total_q = 0;
+
+    @Column(name = "correct_q", columnDefinition="tinyint(1) default 0")
+    private int correct_q = 0;
+
 
     @OneToMany(mappedBy = "user")
     private List<UserLabel> userLabels;
-
 
     @ManyToOne
     private Role role;
