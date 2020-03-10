@@ -9,4 +9,4 @@ A felhasználói profil tartalmazza a helyes válaszok arányát az eddig megvá
 
 
 Adatbázisterv:
-![DB Plan](images/QuizApp_DBplan.png)
+![Database plan image](images/QuizApp_DBplan.png)
