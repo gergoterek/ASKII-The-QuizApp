@@ -6,3 +6,12 @@ ASKII is a quiz web application, where the user can answer questions from a cert
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+
+### Clone the repo
+
+```shell
+* `git clone https://github.com/gergoterek/ASKII-The-QuizApp.git` - Copy the application on your local machine
+* `cd ASKII-The-QuizApp` - Enter application folder
+```
+
