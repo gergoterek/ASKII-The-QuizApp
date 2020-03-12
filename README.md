@@ -1,12 +1,8 @@
-# QuizApp - ASKII
-with Spring Boot + Angular
+# ASKII - The QuizApp
+
+ASKII is a quiz web application, where the user can answer questions from a certain categorie, with given options. After answering a card, the user will get a random next question. Every registered user can add further public questions with answers. All these questions will be available for all other users. The user prifile includes the ratio of total answered questions and correct answers. The goal is to get a better ratio, which are showned on the virtual leatherboard.
 
 
-Célunk   egy olyan   webes alkalmazás   elkészítése, melyen a felhasználó  kategorizált kvízkérdéseket tölthet ki, megadott válaszlehetőségekkel.
-Egy kártya megválaszolása után egy következő véletlenszerű kérdést kap a kiválasztott témákon belül. 
-Minden regisztrált felhasználó felvihet nyilvános kérdéseket, amelyet a többi felhasználó is megkaphat. 
-A felhasználói profil tartalmazza a helyes válaszok arányát az eddig megválaszolt kártyákból számolva. A játékosok egymással versengenek. A verseny állása az eredmény táblán látható.
+## Getting Started
 
-
-Adatbázisterv:
-![Database plan image](images/QuizApp_DBplan.png)
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
