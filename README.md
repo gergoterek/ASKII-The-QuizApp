@@ -7,11 +7,27 @@ ASKII is a quiz web application, where the user can answer questions from a cert
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
+### Requirements
 
-### Clone the repo
+For building and running the application you need:
+
+- [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+- [Maven 3](https://maven.apache.org)
+- [Node Package Manager](https://nodejs.org)
+
+### Clone the repository
 
 ```shell
-* `git clone https://github.com/gergoterek/ASKII-The-QuizApp.git` - Copy the application on your local machine
-* `cd ASKII-The-QuizApp` - Enter application folder
+`git clone https://github.com/gergoterek/ASKII-The-QuizApp.git` - Copy the application on your local machine
+`cd ASKII-The-QuizApp` - Enter application folder
 ```
+
+### Install mvn and start Spring Boot app
+`mvn install` - Download the necessary dependencies
+`mvn spring_boot:run - Start running the Spring Boot application
+Shut it down manually with `Ctrl-C`.
+
+### Tests
+
+
 
