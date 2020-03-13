@@ -13,21 +13,34 @@ For building and running the application you need:
 
 - [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 - [Maven 3](https://maven.apache.org)
-- [Node Package Manager](https://nodejs.org)
+- [Node Package Manager 6](https://nodejs.org)
+
 
 ### Clone the repository
 
-```shell
 `git clone https://github.com/gergoterek/ASKII-The-QuizApp.git` - Copy the application on your local machine
-`cd ASKII-The-QuizApp` - Enter application folder
-```
 
-### Install mvn and start Spring Boot app
+`cd ASKII-The-QuizApp` - Enter application folder
+
+
+
+### Install Maven dependencies and start Spring Boot app
 `mvn install` - Download the necessary dependencies
+
 `mvn spring_boot:run - Start running the Spring Boot application
 Shut it down manually with `Ctrl-C`.
 
-### Tests
 
+### Install npm packages and run npm scripts
+`npm install` - Download the necessary dependencies
+
+`npm start`- Build the application
+Shut it down manually with `Ctrl-C`.
+
+
+### Tests
+`mvn test`- Run all the Maven unit test classes.
+
+`npm test` - Builds the application and runs NPM Intern tests (both unit and functional) one time.
 
 
