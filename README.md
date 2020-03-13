@@ -28,6 +28,7 @@ For building and running the application you need:
 `mvn install` - Download the necessary dependencies
 
 `mvn spring_boot:run - Start running the Spring Boot application
+
 Shut it down manually with `Ctrl-C`.
 
 
@@ -35,6 +36,7 @@ Shut it down manually with `Ctrl-C`.
 `npm install` - Download the necessary dependencies
 
 `npm start`- Build the application
+
 Shut it down manually with `Ctrl-C`.
 
 
