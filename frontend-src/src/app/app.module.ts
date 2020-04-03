@@ -11,12 +11,21 @@ import { QuestionComponent } from './questions/question/question.component';
 import { AddQuestionComponent } from './questions/add-question/add-question.component';
 import { RouterModule, Routes } from '@angular/router';
 
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatSelectModule} from '@angular/material/select';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HeaderInterceptor } from './header-interceptor';
+import { RoutingModule } from './routing/routing.module';
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     QuestionComponent,
-    AddQuestionComponent
+    AddQuestionComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -24,9 +33,22 @@ import { RouterModule, Routes } from '@angular/router';
     BrowserAnimationsModule,
     MaterialModule,
     RouterModule,
+    HttpClientModule,
+    //MatToolbarModule,
+    //MatIconModule,
+    //MatButtonModule,
+    MatInputModule,
+    RoutingModule,
+    MatButtonToggleModule,
+    MatSelectModule,
+    FormsModule,
 
   ],
-  providers: [],
+  providers: [
+    {provide: HTTP_INTERCEPTORS,
+    useClass: HeaderInterceptor,
+    multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
