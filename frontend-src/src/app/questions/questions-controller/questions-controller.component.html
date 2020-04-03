@@ -1,0 +1,48 @@
+<mat-card class = "card">
+    <mat-card-header>
+      <mat-card-title>Quiz **Type** **Level**</mat-card-title>
+      <mat-card-subtitle>**Instructions**</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>          
+           
+           <div>
+                <h1>Kérdések kezelése</h1>
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Kérdések</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <ng-container
+                            *ngIf="questionService.filteredQuestions.length > 0"
+                        >
+                            <tr
+                                *ngFor="let question of questionService.filteredQuestions"
+                                [routerLink]="['/', 'questions', question.id]"
+                            >
+                                <td>{{ question.title }}</td>
+                                
+                            </tr>
+                        </ng-container>
+                        <tr
+                            *ngIf="questionService.filteredQuestions.length === 0"
+                        >
+                            <td
+                                colspan="3"
+                            >Nincsennek kérdések</td>
+                        </tr>
+                            
+                    </tbody>
+                </table>
+            </div>
+</mat-card-content>
+<mat-card-actions>
+    <button mat-raised-button color = "accent">A</button>
+    <button mat-raised-button color = "accent">B</button>
+    <button mat-raised-button color = "accent">C</button>
+    <button mat-raised-button color = "accent">D</button>
+</mat-card-actions>
+</mat-card>
+

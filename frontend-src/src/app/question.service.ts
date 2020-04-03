@@ -21,7 +21,7 @@ export class QuestionService {
     this.filteredQuestions = this.questions = questions.map(this.createQuestionModel);
   }
 
-  async createCsapat(question: Question): Promise<any> {
+  async createQuestion(question: Question): Promise<any> {
     await this.http.post('questions', question).toPromise();
   }
 

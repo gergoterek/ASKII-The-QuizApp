@@ -2,8 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 
-
-import { QuestionComponent } from '../questions/question/question.component';
+import { QuestionsControllerComponent } from '../questions/questions-controller/questions-controller.component';
 
 const routes: Routes = [
   {
@@ -13,7 +12,7 @@ const routes: Routes = [
   },
   {
     path: 'question',
-    component: QuestionComponent
+    component: QuestionsControllerComponent
   },
 
   {
