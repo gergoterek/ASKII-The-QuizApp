@@ -14,6 +14,10 @@ const routes: Routes = [
     path: 'question',
     component: QuestionsControllerComponent
   },
+ /* {
+    path: 'question/:id',
+    component: ElementDetailComponent,
+  },*/
 
   {
     path: '**',

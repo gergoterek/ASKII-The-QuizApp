@@ -10,6 +10,7 @@ import java.util.List;
 @Repository
 public interface QuestionRepository extends CrudRepository<Question, Integer> {
   //  List<Question> findAll();
+         public Question findByTitle(String title);
 }
 
 

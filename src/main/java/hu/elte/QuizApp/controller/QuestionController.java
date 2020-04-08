@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;
 
+import java.util.Optional;
+
 @CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/question")
@@ -20,6 +22,12 @@ public class QuestionController {
     public Iterable<Question> getQuestions(){
         return questionRepository.findAll();
     }
+
+    @GetMapping("/{id}")
+    public Optional<Question> getQuestion(@PathVariable Integer id){
+        return questionRepository.findById(id);
+    }
+
 
     @PostMapping("")
     public ResponseEntity<Question> createQuestion(@RequestBody Question question)

@@ -20,7 +20,7 @@
                         >
                             <tr
                                 *ngFor="let question of questionService.filteredQuestions"
-                                [routerLink]="['/', 'questions', question.id]"
+                                [routerLink]="['/question/'+question.id]"
                             >
                                 <td>{{ question.title }}</td>
                                 
