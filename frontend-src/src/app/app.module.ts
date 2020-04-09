@@ -18,6 +18,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderInterceptor } from './header-interceptor';
 import { RoutingModule } from './routing/routing.module';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { RoutingModule } from './routing/routing.module';
     HeaderComponent,
     QuestionsControllerComponent,
     AddQuestionComponent,
+    HomeComponent,
    
   ],
   imports: [

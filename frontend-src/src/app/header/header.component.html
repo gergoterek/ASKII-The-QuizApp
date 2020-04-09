@@ -1,15 +1,10 @@
 <mat-toolbar color='primary'>
   <mat-toolbar-row>
-      <button mat-icon-button>
-        <mat-icon>menu</mat-icon>
-      </button>
-      <h1>QuizApp</h1>
-      <span class="menu-spacer"></span>
-      <div>
-        <a mat-button [routerLink]="'/create-account'"> Create Account </a>
-        <a mat-button [routerLink] = "'/add-question'"> Add Question</a>
+    <a mat-button [routerLink]="'/home'"> ASKII </a>
+    <span class="example-spacer"></span>
 
-      </div>
+    <a mat-button [routerLink]="'/create-account'" class = "create"> Create Account </a>
+    <a mat-button [routerLink]="'/add-question'" class = "add"> Add Question</a>
+    <a mat-button [routerLink]="'/question'" class = "get"> Get Question</a>
   </mat-toolbar-row>
 </mat-toolbar>
-
