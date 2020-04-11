@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { QuestionsControllerComponent } from '../questions/questions-controller/questions-controller.component';
 import { AddQuestionComponent } from '../questions/add-question/add-question.component';
 import { HomeComponent } from '../home/home.component';
+import {CreateAccountComponent} from '../create-account/create-account.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent
+  },
+  {
+    path: 'create-account',
+    component: CreateAccountComponent
   },
  /* {
     path: 'question/:id',

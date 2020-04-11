@@ -19,6 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderInterceptor } from './header-interceptor';
 import { RoutingModule } from './routing/routing.module';
 import { HomeComponent } from './home/home.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { HomeComponent } from './home/home.component';
     QuestionsControllerComponent,
     AddQuestionComponent,
     HomeComponent,
-   
+    CreateAccountComponent,
+
   ],
   imports: [
     BrowserModule,
