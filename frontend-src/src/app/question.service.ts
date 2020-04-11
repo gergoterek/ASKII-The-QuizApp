@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 export class QuestionService {
 
   questions: Question[] = [];
-  
+  question: Question;
   filteredQuestions: Question[] = this.questions;
 
   constructor(
@@ -19,6 +19,12 @@ export class QuestionService {
     const questions = await (this.http.get('question')
       .toPromise() as Promise<any[]>);
     this.filteredQuestions = this.questions = questions.map(this.createQuestionModel);
+  }
+
+  async getRandomQuestion() {
+    const question = await (this.http.get('question')
+      .toPromise() as Promise<any>);
+    this.question = this.createQuestionModel(question);
   }
 
   async createQuestion(question: Question): Promise<any> {

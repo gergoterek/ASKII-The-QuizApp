@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;
 
 import java.util.Optional;
+import java.util.Random;
 
 @CrossOrigin(origins = "*")
 @RestController
@@ -18,9 +19,13 @@ public class QuestionController {
 
 
     //get - http://localhost:8080/question
+
+
     @GetMapping("")
-    public Iterable<Question> getQuestions(){
-        return questionRepository.findAll();
+    public Question getRandomQuestion(){
+        Random rand = new Random();
+        int randInt = rand.nextInt(questionRepository.findAll().size()) + 1;
+        return questionRepository.findById(randInt);
     }
 
     @GetMapping("/{id}")

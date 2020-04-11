@@ -5,13 +5,17 @@ INSERT INTO label(label_name) values('physic');
 -- INSERT INTO question(title, label_label_ID) values('Mi a hezag?', 1);
 --INSERT INTO question(title, label_label_ID) values('Micsoda?',2);*/
 
-INSERT INTO question(title) values('Mi a hezag?');
+INSERT INTO question(title) values('Mikor volt Eger ostroma?');
 INSERT INTO question(title) values('Micsoda?');
 
-INSERT INTO answer( question_ID,answer_title, correct) values(1, 'semmi', true);
-INSERT INTO answer( question_ID,answer_title, correct) values(1, 'Valami?', false);
-INSERT INTO answer( question_ID,answer_title, correct) values(1, 'szia', false);
-INSERT INTO answer( question_ID,answer_title, correct) values(1, 'telefon', false);
+INSERT INTO answer( question_ID,answer_title, correct) values(2, 'semmi', true);
+INSERT INTO answer( question_ID,answer_title, correct) values(2, 'Valami?', false);
+INSERT INTO answer( question_ID,answer_title, correct) values(2, 'szia', false);
+INSERT INTO answer( question_ID,answer_title, correct) values(2, 'telefon', false);
+INSERT INTO answer( question_ID,answer_title, correct) values(1, '1222', false);
+INSERT INTO answer( question_ID,answer_title, correct) values(1, '1456', false);
+INSERT INTO answer( question_ID,answer_title, correct) values(1, '1552', true);
+INSERT INTO answer( question_ID,answer_title, correct) values(1, '2k20', false);
 
 INSERT INTO role (role_name) VALUES ('admin');
 INSERT INTO role (role_name) VALUES ('user');

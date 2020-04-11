@@ -16,7 +16,7 @@ export class QuestionsControllerComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.questionService.getQuestions();
+    this.questionService.getRandomQuestion();
   }
 
 
