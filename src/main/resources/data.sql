@@ -6,16 +6,23 @@ INSERT INTO label(label_name) values('physic');
 --INSERT INTO question(title, label_label_ID) values('Micsoda?',2);*/
 
 INSERT INTO question(title) values('Mikor volt Eger ostroma?');
-INSERT INTO question(title) values('Micsoda?');
+INSERT INTO question(title) values('Melyik a legnehezebb targy az egyetemen?');
+INSERT INTO question(title) values('Mi a kedvenc konyved?');
 
-INSERT INTO answer( question_ID,answer_title, correct) values(2, 'semmi', true);
-INSERT INTO answer( question_ID,answer_title, correct) values(2, 'Valami?', false);
-INSERT INTO answer( question_ID,answer_title, correct) values(2, 'szia', false);
-INSERT INTO answer( question_ID,answer_title, correct) values(2, 'telefon', false);
 INSERT INTO answer( question_ID,answer_title, correct) values(1, '1222', false);
 INSERT INTO answer( question_ID,answer_title, correct) values(1, '1456', false);
 INSERT INTO answer( question_ID,answer_title, correct) values(1, '1552', true);
 INSERT INTO answer( question_ID,answer_title, correct) values(1, '2k20', false);
+
+INSERT INTO answer( question_ID,answer_title, correct) values(2, 'Szamalap Pepevel', true);
+INSERT INTO answer( question_ID,answer_title, correct) values(2, 'Projekt Eszkozok', false);
+INSERT INTO answer( question_ID,answer_title, correct) values(2, 'Nummod', false);
+INSERT INTO answer( question_ID,answer_title, correct) values(2, 'Anal', false);
+
+INSERT INTO answer( question_ID,answer_title, correct) values(3, 'Szamitogepes halozatok', true);
+INSERT INTO answer( question_ID,answer_title, correct) values(3, 'Haboru es beke', false);
+INSERT INTO answer( question_ID,answer_title, correct) values(3, 'Nummod', false);
+INSERT INTO answer( question_ID,answer_title, correct) values(3, 'CI', false);
 
 INSERT INTO role (role_name) VALUES ('admin');
 INSERT INTO role (role_name) VALUES ('user');
