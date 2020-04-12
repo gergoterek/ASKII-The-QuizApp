@@ -27,7 +27,7 @@ For building and running the application you need:
 ### Install Maven dependencies and start Spring Boot app
 `mvn install` - Download the necessary dependencies
 
-`mvn spring_boot:run - Start running the Spring Boot application
+`mvn spring_boot:run` - Start running the Spring Boot application
 
 Shut it down manually with `Ctrl-C`.
 
@@ -44,5 +44,3 @@ Shut it down manually with `Ctrl-C`.
 `mvn test`- Run all the Maven unit test classes.
 
 `npm test` - Builds the application and runs NPM Intern tests (both unit and functional) one time.
-
-

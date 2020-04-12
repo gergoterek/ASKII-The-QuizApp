@@ -1,0 +1,30 @@
+<mat-card class="card">
+  <mat-card-content>
+    <div>
+      <h1>{{ questionService.question?.title }}</h1>
+      
+      <!-- <table>
+        <ng-container *ngIf="questionService.filteredQuestions.length === 0">
+           <tr *ngFor="let question of questionService.filteredQuestions" [routerLink]="['/question/'+question.id]">
+            <td>{{ question.title }}</td>
+
+          </tr> 
+          <tr>
+            <td>{{ questionService.question.title }}</td>
+
+          </tr>
+
+        </ng-container>
+        <tr *ngIf="questionService.filteredQuestions.length != 0">
+          <td colspan="3">Nincsennek kérdések</td>
+        </tr>
+      </table> -->
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="accent">{{questionService.question?.answers[0].answer_title}}</button>
+    <button mat-raised-button color="accent">{{questionService.question?.answers[1].answer_title}}</button>
+    <button mat-raised-button color="accent">{{questionService.question?.answers[2].answer_title}}</button>
+    <button mat-raised-button color="accent">{{questionService.question?.answers[3].answer_title}}</button>
+  </mat-card-actions>
+</mat-card>
