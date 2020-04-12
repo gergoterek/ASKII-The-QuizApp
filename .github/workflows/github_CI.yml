@@ -27,4 +27,5 @@ jobs:
       working-directory: ./frontend-src
     - name: Test
       run: npm test
+      working-directory: ./frontend-src
       
