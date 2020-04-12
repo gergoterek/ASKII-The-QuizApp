@@ -15,11 +15,11 @@ export class QuestionService {
     private http: HttpClient
   ) { }
 
-  async getQuestions() {
-    const questions = await (this.http.get('question')
-      .toPromise() as Promise<any[]>);
-    this.filteredQuestions = this.questions = questions.map(this.createQuestionModel);
-  }
+  // async getQuestions() {
+  //   const questions = await (this.http.get('question')
+  //     .toPromise() as Promise<any[]>);
+  //   this.filteredQuestions = this.questions = questions.map(this.createQuestionModel);
+  // }
 
   async getRandomQuestion() {
     const question = await (this.http.get('question')
