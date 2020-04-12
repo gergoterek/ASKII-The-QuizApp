@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { QuestionsControllerComponent } from './questions-controller.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('QuestionsControllerComponent', () => {
   let component: QuestionsControllerComponent;
@@ -9,7 +10,8 @@ describe('QuestionsControllerComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      declarations: [ QuestionsControllerComponent ]
+      declarations: [ QuestionsControllerComponent ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
       //providers: [QuestionsControllerComponent]
     })
     .compileComponents();
