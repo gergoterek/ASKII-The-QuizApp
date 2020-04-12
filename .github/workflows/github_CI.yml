@@ -25,7 +25,7 @@ jobs:
     - name: Install
       run: npm install
       working-directory: ./frontend-src
-    - name: Test
-      run: npx ng test --watch=false
-      working-directory: ./frontend-src
+  #  - name: Test
+  #    run: npx ng test --watch=false
+  #    working-directory: ./frontend-src
       
