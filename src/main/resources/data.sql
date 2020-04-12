@@ -8,6 +8,7 @@ INSERT INTO label(label_name) values('physic');
 INSERT INTO question(title) values('Mikor volt Eger ostroma?');
 INSERT INTO question(title) values('Melyik a legnehezebb targy az egyetemen?');
 INSERT INTO question(title) values('Mi a kedvenc konyved?');
+INSERT INTO question(title) values('Mikor született Ábrahám?');
 
 INSERT INTO answer( question_ID,answer_title, correct) values(1, '1222', false);
 INSERT INTO answer( question_ID,answer_title, correct) values(1, '1456', false);
@@ -23,6 +24,11 @@ INSERT INTO answer( question_ID,answer_title, correct) values(3, 'Szamitogepes h
 INSERT INTO answer( question_ID,answer_title, correct) values(3, 'Haboru es beke', false);
 INSERT INTO answer( question_ID,answer_title, correct) values(3, 'Nummod', false);
 INSERT INTO answer( question_ID,answer_title, correct) values(3, 'CI', false);
+
+INSERT INTO answer( question_ID,answer_title, correct) values(4, '-1950', true);
+INSERT INTO answer( question_ID,answer_title, correct) values(4, '-6000', false);
+INSERT INTO answer( question_ID,answer_title, correct) values(4, '4000', false);
+INSERT INTO answer( question_ID,answer_title, correct) values(4, 'nem szuletett meg', false);
 
 INSERT INTO role (role_name) VALUES ('admin');
 INSERT INTO role (role_name) VALUES ('user');
