@@ -39,6 +39,12 @@ public class User {
     @OneToMany(mappedBy = "user")
     private List<UserLabel> userLabels;
 
-    @ManyToOne
+    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
     private Role role;
+
+    public enum Role {
+        GUEST, USER, ADMIN
+    }
+
 }

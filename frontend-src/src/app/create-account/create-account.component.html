@@ -1,1 +1,50 @@
-<p>create-account works!</p>
+<mat-card id="card" style="text-align: center; padding-top: 4em;">
+<div>
+    <mat-card-title>
+		Create account
+	</mat-card-title>
+  </div>
+  
+  <form #form="ngForm" (ngSubmit)="onSubmit(form.form)">
+  
+    
+    <div style="padding-top: 2em;">
+      <mat-form-field>
+        <input matInput placeholder="Nickname" required [(ngModel)]="user.nickname" name="nickname" #nickname="ngModel" />
+        <mat-error *ngIf="nickname.invalid">Nickname is required</mat-error>
+      </mat-form-field>
+    </div>
+  
+    <div>
+        <mat-form-field>
+          <input matInput placeholder="Email" required [(ngModel)]="user.email" name="email" #email="ngModel" />
+          <mat-error *ngIf="email.invalid">Email address is required</mat-error>
+        </mat-form-field>
+      </div>
+
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Username" required [(ngModel)]="user.username" name="username" #username="ngModel" />
+        <mat-error *ngIf="username.invalid">Username is required</mat-error>
+      </mat-form-field>
+    </div>
+  
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Password" required [type]="hidePassword ? 'password' : 'text'"
+          [(ngModel)]="user.password" name="password" #password="ngModel" />
+        <mat-icon matSuffix (click)="hidePassword = !hidePassword">{{hidePassword ? 'visibility_off' : 'visibility'}}
+        </mat-icon>
+        <mat-error *ngIf="password.invalid">Password is required</mat-error>
+      </mat-form-field>
+    </div>
+   
+  
+    <div style="padding-top: 2em;">
+      <button mat-raised-button type="submit" color="primary" [disabled]="form.form.invalid">
+        Register
+      </button>
+    </div>
+  </form>
+</mat-card>
+ 

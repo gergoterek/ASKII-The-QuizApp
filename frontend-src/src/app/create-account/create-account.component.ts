@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+import { User } from '../domain/user';
+import { UserRole } from '../domain/user-role';
 
 @Component({
   selector: 'app-create-account',
@@ -7,9 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateAccountComponent implements OnInit {
 
-  constructor() { }
+  hidePassword = true;
+
+  user: User = {
+    
+    username: '',
+    password: '',
+    nickname: '',
+    email: '',
+    role: UserRole.Guest,    
+  } 
+
+  constructor(
+  ) { }
 
   ngOnInit(): void {
   }
 
+  async onSubmit(form: FormGroup) {
+    
+  }
 }

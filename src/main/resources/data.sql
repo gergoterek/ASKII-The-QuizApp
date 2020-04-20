@@ -30,18 +30,15 @@ INSERT INTO answer( question_ID,answer_title, correct) values(4, '-6000', false)
 INSERT INTO answer( question_ID,answer_title, correct) values(4, '4000', false);
 INSERT INTO answer( question_ID,answer_title, correct) values(4, 'nem szuletett meg', false);
 
-INSERT INTO role (role_name) VALUES ('admin');
-INSERT INTO role (role_name) VALUES ('user');
-INSERT INTO role (role_name) VALUES ('guest');
 
-INSERT INTO user (username, password, email, nickname, role_ID) VALUES ('user1', '$2a$04$YDiv9c./ytEGZQopFfExoOgGlJL6/o0er0K.hiGb5TGKHUL8Ebn..','@','User1',1);
-INSERT INTO user (username, password, email, nickname, role_ID) VALUES ('user', '$2a$04$YDiv9c./ytEGZQopFfExoOgGlJL6/o0er0K.hiGb5TGKHUL8Ebn..',',@','User',1);
-INSERT INTO user (username, password, email, nickname, role_ID) VALUES ('admin', '$2a$04$YDiv9c./ytEGZQopFfExoOgGlJL6/o0er0K.hiGb5TGKHUL8Ebn..','@','Admin',1);
-INSERT INTO user (username, password, email, nickname, role_ID) VALUES ('sanyi', '$2a$04$YDiv9c./ytEGZQopFfExoOgGlJL6/o0er0K.hiGb5TGKHUL8Ebn..','@','Sanyika',1);
-INSERT INTO user (username, password, email, nickname, role_ID) VALUES ('jozsi', '$2a$04$YDiv9c./ytEGZQopFfExoOgGlJL6/o0er0K.hiGb5TGKHUL8Ebn..','@','Jozsika',2);
-INSERT INTO user (username, password, email, nickname, role_ID) VALUES ('bela', '$2a$04$YDiv9c./ytEGZQopFfExoOgGlJL6/o0er0K.hiGb5TGKHUL8Ebn..','@','Bela',2);
-INSERT INTO user (username, password, email, nickname, role_ID) VALUES ('margit', '$2a$04$YDiv9c./ytEGZQopFfExoOgGlJL6/o0er0K.hiGb5TGKHUL8Ebn..','@','Margitka',2);
-INSERT INTO user (username, password, email, nickname, role_ID) VALUES ('tibor', 'YWxtYWZh','ROLE_ADMIN','Tibike',2);
+INSERT INTO user (username, password, role, email, nickname) VALUES ('user1', '$2a$04$YDiv9c./ytEGZQopFfExoOgGlJL6/o0er0K.hiGb5TGKHUL8Ebn..','ADMIN','@','User1');
+INSERT INTO user (username, password, role, email, nickname) VALUES ('user', '$2a$04$YDiv9c./ytEGZQopFfExoOgGlJL6/o0er0K.hiGb5TGKHUL8Ebn..','USER','@','User');
+INSERT INTO user (username, password, role, email, nickname) VALUES ('admin', '$2a$04$YDiv9c./ytEGZQopFfExoOgGlJL6/o0er0K.hiGb5TGKHUL8Ebn..','ADMIN','@','Admin');
+INSERT INTO user (username, password, role, email, nickname) VALUES ('sanyi', '$2a$04$YDiv9c./ytEGZQopFfExoOgGlJL6/o0er0K.hiGb5TGKHUL8Ebn..','ADMIN','@','Sanyika');
+INSERT INTO user (username, password, role, email, nickname) VALUES ('jozsi', '$2a$04$YDiv9c./ytEGZQopFfExoOgGlJL6/o0er0K.hiGb5TGKHUL8Ebn..','ADMIN','@','Jozsika');
+INSERT INTO user (username, password, role, email, nickname) VALUES ('bela', '$2a$04$YDiv9c./ytEGZQopFfExoOgGlJL6/o0er0K.hiGb5TGKHUL8Ebn..','USER','@','Bela');
+INSERT INTO user (username, password, role, email, nickname) VALUES ('margit', '$2a$04$YDiv9c./ytEGZQopFfExoOgGlJL6/o0er0K.hiGb5TGKHUL8Ebn..','USER','@','Margitka');
+INSERT INTO user (username, password, role, email, nickname) VALUES ('tibor', 'YWxtYWZh','ADMIN','@','Tibike');
 
 INSERT INTO user_label (user_ID, label_ID) VALUES(1,1);
 INSERT INTO user_label (user_ID, label_ID) VALUES(2,2);
