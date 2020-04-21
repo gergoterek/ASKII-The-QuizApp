@@ -78,36 +78,7 @@ jobs:
     - name: Build NPM
       run: npm build
       working-directory: ./frontend-src
-      
- # npmtest:
- #   runs-on: ubuntu-latest
- #   needs: [npminstall, npmbuild] 
- #   steps:
- #   - uses: actions/checkout@v2
- #   - name: Use Node.js ${{ matrix.node-version }}
- #     uses: actions/setup-node@v1
- #     with:
- #       node-version: ${{ matrix.node-version }}
- #   - name: NPM Test
- #     run: npx ng test --watch=false --browsers ChromeHeadless
- #     #env:
- #     #  CI: true
- #     working-directory: ./frontend-src
-   
- # upload:
- #   runs-on: ubuntu-latest
- #   needs: [mvninstall, mvnbuild, mvntest, npminstall, npmbuild] 
- #   steps:
- #   - name: Upload artifact
- #     uses: actions/upload-artifact@v1.0.0
- #     with:
- #       # Artifact name
- #       name: Result
- #       # Directory containing files to upload
- #       path: ./artifacts/results
- #       working-directory: ./artifacts/results
-        
-        
+              
     - name: Upload artifact
       uses: actions/upload-artifact@v1.0.0
       with:
@@ -115,39 +86,17 @@ jobs:
         name: Result
         # Directory containing files to upload
         path: ./artifacts/results
+  prettier:
+    runs-on: ubuntu-latest
+    needs: npminstall    
+    steps:
+      - name: Prettier install
+        run: npm install --global prettier
+        working-directory: ./frontend-src 
+      - name: Prettier write
+        run: npx prettier@2.0.4 . --write
+        working-directory: ./frontend-src 
+      - name: Prettier check
+        run: npx prettier@2.0.4 . --check
+        working-directory: ./frontend-src 
         
-        
-        
-  # This is a basic workflow to help you get started with Actions
-
-#name: CI
-#
-## Controls when the action will run. Triggers the workflow on push or pull request
-## events but only for the master branch
-#on:
-#  push:
-#    branches: [ master ]
-#  pull_request:
-#    branches: [ master ]
-#
-## A workflow run is made up of one or more jobs that can run sequentially or in parallel
-#jobs:
-#  test:
-#    name: Running Unit Tests
-#    runs-on: ubuntu-latest
-#    
-#    steps:
-#    - uses: actions/checkout@v1
-#    - name: Use Node.js ${{ matrix.node-version }}
-#      uses: actions/setup-node@v1
-#      with:
-#        node-version: ${{ matrix.node-version }}
-#    - name: Install
-#      run: npm install
-#      working-directory: ./frontend-src
-#    - name: Karma
-#      run: npm install karma --save-dev
-#      working-directory: ./frontend-src
-#    - name: Test
-#      run: npx ng test --watch=false --browsers ChromeHeadless
-#      working-directory: ./frontend-src
