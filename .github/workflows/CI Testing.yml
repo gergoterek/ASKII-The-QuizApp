@@ -55,10 +55,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: Install NPM
-      run: npm install --no-bin-links
-      working-directory: ./frontend-src
-    - name: npm config
-      run: npm config set unsafe-perm=true
+      run: npm install 
       working-directory: ./frontend-src
     - name: Karma
       run: npm install karma --save-dev
@@ -70,7 +67,7 @@ jobs:
       working-directory: ./frontend-src
       
     - name: Prettier install
-      run: npm install --global prettier
+      run: npm install prettier
       working-directory: ./frontend-src 
       
   npmbuild:
