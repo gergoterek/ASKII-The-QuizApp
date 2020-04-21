@@ -46,7 +46,7 @@ jobs:
       run: mvn clean test
   
   
-  npmtest:
+  npminstall:
     runs-on: ubuntu-latest
     steps:  
     - uses: actions/checkout@v1
@@ -91,7 +91,7 @@ jobs:
         path: ./artifacts/results
   prettier:
     runs-on: ubuntu-latest
-    needs: npmtest    
+    needs: npminstall
     steps:      
       - name: Prettier write
         run: npx prettier@2.0.4 . --write
