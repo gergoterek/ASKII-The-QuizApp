@@ -57,9 +57,9 @@ jobs:
     - name: Install NPM
       run: npm install
       working-directory: ./frontend-src
-    - name: Prettier install
-      run: npm install --global prettier
-      working-directory: ./frontend-src 
+    - name: npm config
+      run: npm config set unsafe-perm=true
+      working-directory: ./frontend-src
     - name: Karma
       run: npm install karma --save-dev
       working-directory: ./frontend-src
@@ -68,6 +68,9 @@ jobs:
       #env:
       #  CI: true
       working-directory: ./frontend-src
+    - name: Prettier install
+      run: npm install --global prettier
+      working-directory: ./frontend-src 
       
   npmbuild:
     runs-on: ubuntu-latest
