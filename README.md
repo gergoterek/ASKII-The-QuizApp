@@ -27,7 +27,7 @@ For building and running the application you need:
 ### Install Maven dependencies and start Spring Boot app
 `mvn install` - Download the necessary dependencies
 
-`mvn spring_boot:run` - Start running the Spring Boot application
+`mvn spring-boot:run` - Start running the Spring Boot application
 
 Shut it down manually with `Ctrl-C`.
 
